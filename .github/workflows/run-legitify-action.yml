@@ -1,0 +1,11 @@
+name: Run Legitify (Action)
+on:
+  workflow_dispatch:
+jobs:
+  run_legitify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: chtzvt/legitify@v1
+        with: 
+          github_token: ${{ secrets.LEGITIFY_GITHUB_PAT }} 
+          sarif: true
